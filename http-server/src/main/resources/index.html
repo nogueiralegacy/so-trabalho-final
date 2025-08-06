@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabalho Final - Sistemas Operacionais</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #3024d8 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+        
+        .container {
+            text-align: center;
+            max-width: 800px;
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .title {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+        
+        .project-info {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 15px;
+            margin: 30px 0;
+            text-align: left;
+        }
+        
+        .project-info h3 {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: #ffd700;
+        }
+        
+        .project-info p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+        
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+        
+        .feature {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 4px solid #ffd700;
+        }
+        
+        .feature h4 {
+            color: #ffd700;
+            margin-bottom: 10px;
+        }
+        
+        .navigation {
+            margin-top: 40px;
+        }
+        
+        .nav-link {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            text-decoration: none;
+            padding: 12px 25px;
+            margin: 0 10px;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        
+        .nav-link:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .footer {
+            margin-top: 40px;
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">HTTP Server em Java</h1>
+        <h2 class="subtitle">Trabalho Final - Sistemas Operacionais</h2>
+        
+        <div class="project-info">
+            <h3>📋 Sobre o Projeto</h3>
+            <p>
+                Este projeto implementa um servidor HTTP completo desenvolvido em Java, demonstrando 
+                conceitos fundamentais de sistemas operacionais como gerenciamento de threads, 
+                comunicação entre processos e programação concorrente.
+            </p>
+            <p>
+                O servidor é capaz de atender múltiplas requisições simultaneamente, servir arquivos 
+                estáticos e processar diferentes tipos de conteúdo HTTP.
+            </p>
+        </div>
+        
+        <div class="features">
+            <div class="feature">
+                <h4>🔧 Multithreading</h4>
+                <p>Gerenciamento eficiente de múltiplas conexões simultâneas</p>
+            </div>
+            <div class="feature">
+                <h4>📁 Arquivos Estáticos</h4>
+                <p>Servir HTML, CSS, imagens e outros recursos</p>
+            </div>
+            <div class="feature">
+                <h4>🌐 Protocolo HTTP</h4>
+                <p>Implementação completa do protocolo HTTP/1.1</p>
+            </div>
+            <div class="feature">
+                <h4>⚙️ Configurável</h4>
+                <p>Sistema de configuração flexível via JSON</p>
+            </div>
+        </div>
+        
+        <div class="navigation">
+            <a href="/participantes/index.html" class="nav-link">👥 Ver Participantes</a>
+            <a href="/favicon.ico" class="nav-link">🎯 Testar Favicon</a>
+        </div>
+        
+        <div class="footer">
+            <p>Desenvolvido como projeto final da disciplina de Sistemas Operacionais</p>
+            <p>UFG • Semestre 2025.1</p>
+        </div>
+    </div>
+</body>
+</html>

@@ -10,7 +10,7 @@ import java.net.Socket;
 
 public class Porteiro {
     private static final Logger logger = LoggerFactory.getLogger(Porteiro.class);
-    private static int quantidadeClientesRespondidos = 0;
+    private static int quantidadeClientesRecebidos = 0;
     private final static int PORT = Configuration.getPort();
     private final static ServerSocket SERVER_SOCKET;
 
@@ -18,6 +18,7 @@ public class Porteiro {
         // Abre a porta do servidor
         try {
             SERVER_SOCKET = new ServerSocket(PORT);
+            logger.info("Servidor HTTP iniciado na porta " + PORT);
         } catch (Exception e) {
             throw new RuntimeException("Erro ao criar o socket do servidor", e);
         }
@@ -26,7 +27,8 @@ public class Porteiro {
     private static Cliente recebeCliente() {
         try {
             Socket socket = SERVER_SOCKET.accept();
-            logger.info("Bem vindo cliente " + quantidadeClientesRespondidos);
+            quantidadeClientesRecebidos++;
+            logger.info("Quantidade de clientes: " + quantidadeClientesRecebidos);
 
             return new Cliente(socket);
         } catch (Exception e) {
@@ -37,8 +39,6 @@ public class Porteiro {
     public static void despedeCliente(Cliente cliente) {
         try {
             cliente.getSOCKET().close();
-            logger.info("Tchau cliente " + quantidadeClientesRespondidos + "\n");
-            quantidadeClientesRespondidos++;
         } catch (Exception e) {
             throw new RuntimeException("Erro ao fechar o socket do cliente", e);
         }

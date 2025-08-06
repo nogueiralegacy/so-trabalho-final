@@ -46,6 +46,7 @@ public class Atendente implements Handler {
             logger.info("MimeType do recurso: " + mimeType);
 
             resource = getResource(resourcePath);
+            logger.info("Recurso carregado com sucesso");
 
         } catch (IOException e) {
             logger.error("Erro ao tentar carregar o recurso desejado", e);
@@ -73,6 +74,9 @@ public class Atendente implements Handler {
     public Path getResourcePath(String url) {
         String webroot = Configuration.getWebroot();
         String[] dirs = url.split("/");
+        if (dirs.length == 0) {
+            return Paths.get(webroot, "index.html");
+        }
 
         Path resourcePath = Paths.get(webroot);
         for (String dir : dirs) {

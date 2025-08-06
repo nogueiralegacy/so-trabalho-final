@@ -30,7 +30,7 @@ public class Configuration {
     }
 
     private static void putSampleResource() {
-        String[] resourcesName = {"root.html", "favicon.ico", "monalisa.jpeg"};
+        String[] resourcesName = {"index.html", "favicon.ico", "monalisa.jpeg", "participantes/index.html", "participantes/participantes.json", "so-final.pdf"};
 
         for (String name : resourcesName) {
             byte[] sampleResource = new Util().getResource(name);
